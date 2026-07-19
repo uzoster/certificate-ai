@@ -1,18 +1,27 @@
 from sqlalchemy import Column, Integer, String, DateTime
 from datetime import datetime
 
-from backend.app.core.database import Base
+from app.core.database import Base
 
 
 class Certificate(Base):
+
     __tablename__ = "certificates"
 
     id = Column(Integer, primary_key=True, index=True)
-    uuid = Column(String, unique=True)
-    fullname = Column(String)
-    course = Column(String)
-    trainer = Column(String)
+
+    uuid = Column(String, unique=True, nullable=False)
+
+    fullname = Column(String, nullable=False)
+
+    course = Column(String, nullable=False)
+
+    trainer = Column(String, nullable=False)
+
     background = Column(String)
+
     pdf = Column(String)
+
     qr = Column(String)
+
     created_at = Column(DateTime, default=datetime.utcnow)

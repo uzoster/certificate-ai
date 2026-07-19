@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+sqlalchemy
+python-dotenv
+python-multipart
+pillow
+qrcode
+reportlab
+diffusers
+transformers
+accelerate
+torch
+sentencepiece
+safetensors
