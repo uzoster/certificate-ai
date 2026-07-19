@@ -20,8 +20,13 @@ class Certificate(Base):
 
     background = Column(String)
 
+    # Certificate PNG
+    image = Column(String)
+
+    # Certificate PDF
     pdf = Column(String)
 
+    # QR Code
     qr = Column(String)
 
     created_at = Column(DateTime, default=datetime.utcnow)
