@@ -4,10 +4,10 @@ from fastapi.staticfiles import StaticFiles
 from app.core.database import Base, engine
 
 from app.models.certificate import Certificate
+# from app.routers.ai import router as ai_router
 
 from app.routers.certificate import router as certificate_router
 from app.routers.verify import router as verify_router
-
 
 # Database yaratish
 Base.metadata.create_all(bind=engine)
@@ -31,7 +31,7 @@ app.mount(
 # Routers
 app.include_router(certificate_router)
 app.include_router(verify_router)
-
+# app.include_router(ai_router)
 
 # Home
 @app.get("/")

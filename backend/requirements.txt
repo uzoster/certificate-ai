@@ -6,3 +6,9 @@ python-multipart
 pillow
 qrcode
 reportlab
+diffusers
+transformers
+accelerate
+torch
+sentencepiece
+safetensors

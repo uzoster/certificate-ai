@@ -54,7 +54,7 @@ def update(
         db,
         certificate_id,
         data
-    )
+    )   
 
     if not certificate:
         raise HTTPException(
